@@ -7,7 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 
 
 import { LEVEL_DATA } from '../config/levelData';
-import Level01 from '../levels/Level01';
+import Level01 from '../levels/level01';
 import Level02 from '../levels/Level02';
 import Level03 from '../levels/Level03';
 import Level04 from '../levels/Level04';
