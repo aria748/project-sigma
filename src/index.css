@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palet warna Scientific Cyberpunk kita */
+  --color-charcoal: #0D0D0D;
+  --color-emerald-primary: #10B981;
+  --color-gold-accent: #FFD226;
+  --color-midnight: #00243F;
+
+  /* Font yang kamu minta */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular;
+  
+  /* Efek Glow untuk HUD */
+  --shadow-hud: 0 0 15px rgba(16, 185, 129, 0.3);
+  --shadow-gold-glow: 0 0 20px rgba(255, 210, 38, 0.4);
+}
+
+/* Base style agar aplikasi terasa seperti terminal */
+@layer base {
+  body {
+    @apply bg-charcoal text-emerald-primary antialiased;
+    cursor: crosshair; /* Cursor ala hacker */
+  }
+}
+
+@layer utilities {
+  /* Efek garis-garis layar hologram/CRT */
+  .scanlines {
+    position: relative;
+  }
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.2) 51%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  /* Efek grid latar belakang ala radar/3D space */
+  .bg-grid {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
