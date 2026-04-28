@@ -7,16 +7,16 @@ import { AnimatePresence } from 'framer-motion';
 
 
 import { LEVEL_DATA } from '../config/levelData';
-import Level01 from '../levels/level01';
-import Level02 from '../levels/level02';
-import Level03 from '../levels/level03';
-import Level04 from '../levels/level04';
-import Level05 from '../levels/level05';
-import Level06 from '../levels/level06';
-import Level07 from '../levels/level07';
-import Level08 from '../levels/level08';
-import Level09 from '../levels/level09';
-import Level10 from '../levels/level10';
+import Level01 from '../levels/Level01';
+import Level02 from '../levels/Level02';
+import Level03 from '../levels/Level03';
+import Level04 from '../levels/Level04';
+import Level05 from '../levels/Level05';
+import Level06 from '../levels/Level06';
+import Level07 from '../levels/Level07';
+import Level08 from '../levels/Level08';
+import Level09 from '../levels/Level09';
+import Level10 from '../levels/Level10';
 
 function InteractiveAnomaly({ frequency, amplitude, isStabilized }) {
   const meshRef = useRef();
